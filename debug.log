@@ -1,0 +1,28 @@
+\nDEBUG INFO:\n
+HTTP/1.1 200 OK
+Vary: Origin
+Access-Control-Allow-Credentials: true
+Accept-Ranges: bytes
+Cache-Control: public, max-age=0
+Last-Modified: Sat, 22 Mar 2025 01:22:41 GMT
+ETag: W/"48f0-195bb71f115"
+Content-Type: text/html; charset=UTF-8
+Content-Length: 18672
+Date: Sat, 22 Mar 2025 01:24:23 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+\n
+HTTP/1.1 200 OK
+Vary: Origin
+Access-Control-Allow-Credentials: true
+Accept-Ranges: bytes
+Cache-Control: public, max-age=0
+Last-Modified: Sat, 22 Mar 2025 01:23:35 GMT
+ETag: W/"2f8e-195bb72c3da"
+Content-Type: text/html; charset=UTF-8
+Content-Length: 12174
+Date: Sat, 22 Mar 2025 01:24:23 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+

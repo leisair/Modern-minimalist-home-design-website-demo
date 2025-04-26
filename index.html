@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avision AI - 智能家居设计平台</title>
+    <meta name="description" content="Avision AI是领先的人工智能家居设计平台，提供高效、精准、个性化的家装设计方案。">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Preline UI -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/preline@2.0.3/dist/preline.min.css" />
+    <!-- Font Awesome 图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <script>
+        // 配置Tailwind主题
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f7ff',
+                            100: '#e0eefe',
+                            200: '#b9ddfd',
+                            300: '#7cc2fc',
+                            400: '#3aa0f8',
+                            500: '#1a81ea',
+                            600: '#0866d8',
+                            700: '#0554ad',
+                            800: '#074786',
+                            900: '#0a3e70',
+                            950: '#07254a',
+                        },
+                        secondary: {
+                            50: '#f2f7fd',
+                            100: '#e7f0fb',
+                            200: '#d3e2f7',
+                            300: '#b3cdef',
+                            400: '#8db0e5',
+                            500: '#6a91d9',
+                            600: '#5175c9',
+                            700: '#4261b3',
+                            800: '#395194',
+                            900: '#324675',
+                            950: '#212c4a',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        
+        /* 自定义弥撒风格元素 */
+        .bloom-effect {
+            filter: blur(60px);
+            opacity: 0.6;
+        }
+        
+        .diffused-border {
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(to right, #1a81ea, #6a91d9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .soft-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+        }
+        
+        /* 弥撒风图形元素 */
+        .geometric-shape {
+            position: relative;
+            z-index: -1;
+            transition: all 1s ease;
+        }
+        
+        /* 动画效果 */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* 平滑滚动和过渡效果 */
+        .smooth-transition {
+            transition: all 0.5s ease;
+        }
+        
+        /* 渐变背景 */
+        .gradient-bg {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .dark .gradient-bg {
+            background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+        }
+        
+        /* 平滑滚动 */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #c5c5c5;
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+        
+        /* 深色模式调整 */
+        .dark ::-webkit-scrollbar-track {
+            background: #1e1e1e;
+        }
+        
+        .dark ::-webkit-scrollbar-thumb {
+            background: #4a4a4a;
+        }
+        
+        .dark ::-webkit-scrollbar-thumb:hover {
+            background: #5e5e5e;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased gradient-bg text-gray-800 dark:text-gray-200">
+    <!-- 全局装饰元素 -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none" style="z-index: -1;">
+        <div class="absolute -top-1/3 -right-1/4 w-1/2 h-1/2 rounded-full bg-primary-300/30 dark:bg-primary-900/30 bloom-effect float-animation"></div>
+        <div class="absolute -bottom-1/3 -left-1/4 w-1/2 h-1/2 rounded-full bg-secondary-300/30 dark:bg-secondary-900/30 bloom-effect float-animation" style="animation-delay: 2s;"></div>
+    </div>
+    
+    <!-- 页面内容在这里组合所有组件 -->
+    <div class="relative z-0">
+        <!-- 导航组件 -->
+        <div id="navigation-container"></div>
+        
+        <!-- 首屏英雄区组件 -->
+        <div id="hero-container"></div>
+        
+        <!-- 产品功能介绍组件 -->
+        <div id="features-container"></div>
+        
+        <!-- 设计优势展示组件 -->
+        <div id="advantages-container"></div>
+        
+        <!-- 设计案例展示组件 -->
+        <div id="cases-container"></div>
+        
+        <!-- 用户评价与合作品牌组件 -->
+        <div id="testimonials-container"></div>
+        
+        <!-- 底部信息组件 -->
+        <div id="footer-container"></div>
+    </div>
+    
+    <!-- 暗黑模式切换 -->
+    <button id="dark-mode-toggle" class="fixed bottom-4 right-4 p-3 rounded-full bg-white/10 backdrop-blur-lg border border-white/20 text-gray-700 dark:text-gray-300 shadow-lg z-50">
+        <i class="fas fa-moon dark:hidden"></i>
+        <i class="fas fa-sun hidden dark:block"></i>
+    </button>
+    
+    <!-- Preline UI JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/preline@2.0.3/dist/preline.min.js"></script>
+    
+    <!-- 修复脚本 -->
+    <script src="fix.js"></script>
+    
+    <!-- 深色模式切换脚本 -->
+    <script>
+        // 加载组件
+        document.addEventListener('DOMContentLoaded', function() {
+            const components = [
+                { id: 'navigation-container', file: 'components/navigation.html' },
+                { id: 'hero-container', file: 'components/hero.html' },
+                { id: 'features-container', file: 'components/features.html' },
+                { id: 'advantages-container', file: 'components/advantages.html' },
+                { id: 'cases-container', file: 'components/cases.html' },
+                { id: 'testimonials-container', file: 'components/testimonials.html' },
+                { id: 'footer-container', file: 'components/footer.html' }
+            ];
+            
+            // 使用fetch加载每个组件
+            components.forEach(component => {
+                fetch(component.file)
+                    .then(response => response.text())
+                    .then(html => {
+                        document.getElementById(component.id).innerHTML = html;
+                    })
+                    .catch(error => {
+                        console.error(`加载组件 ${component.file} 时出错:`, error);
+                    });
+            });
+            
+            // 监听深色/浅色模式切换
+            const darkModeToggle = document.getElementById('dark-mode-toggle');
+            if (darkModeToggle) {
+                darkModeToggle.addEventListener('click', function() {
+                    document.documentElement.classList.toggle('dark');
+                    
+                    // 可选：保存用户偏好
+                    const isDarkMode = document.documentElement.classList.contains('dark');
+                    localStorage.setItem('darkMode', isDarkMode);
+                });
+                
+                // 加载用户偏好
+                const savedDarkMode = localStorage.getItem('darkMode');
+                if (savedDarkMode === 'true') {
+                    document.documentElement.classList.add('dark');
+                }
+            }
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,162 @@
+<section class="py-16 md:py-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center gap-12 relative">
+            <!-- 左侧文字区 -->
+            <div class="lg:w-1/2 z-10">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                    <span class="gradient-text">绘梦家</span>
+                    <div class="mt-3 text-gray-800 dark:text-gray-100">用AI重塑家居美学</div>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-xl">
+                    让每一次改造都成为艺术的新生，Avision AI 智能家居设计，为您打造理想的生活空间。
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#" class="px-8 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-full hover:shadow-lg transition-all diffused-border text-center">
+                        开始设计
+                    </a>
+                    <a href="#" class="px-8 py-3 bg-white/20 dark:bg-gray-800/20 backdrop-blur-lg border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-full hover:bg-white/30 dark:hover:bg-gray-800/30 transition-all text-center">
+                        查看案例
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 右侧图形区 -->
+            <div class="lg:w-1/2 relative">
+                <!-- 几何装饰元素 -->
+                <div class="absolute -top-20 -right-20 w-64 h-64 bg-primary-200/30 dark:bg-primary-800/30 rounded-full bloom-effect"></div>
+                <div class="absolute bottom-10 -left-10 w-32 h-32 bg-secondary-200/30 dark:bg-secondary-800/30 rounded-full bloom-effect"></div>
+                
+                <!-- 室内设计图 -->
+                <div class="relative z-10 diffused-border p-1 rounded-2xl soft-shadow">
+                    <!-- 卡片式设计元素，显示不同设计风格 -->
+                    <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden" id="design-slider">
+                        <!-- 图片容器 -->
+                        <div class="absolute inset-0 flex transition-transform duration-500 ease-out" id="slider-container">
+                            <!-- 风格一：现代简约 -->
+                            <div class="min-w-full h-full relative flex-shrink-0">
+                                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                                     alt="现代简约风格" class="absolute inset-0 w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
+                                    <div class="text-white text-xl font-semibold">现代简约风格</div>
+                                    <div class="flex space-x-2 mt-2">
+                                        <span class="px-3 py-1 bg-primary-500/80 rounded-full text-white text-sm">简约</span>
+                                        <span class="px-3 py-1 bg-secondary-500/80 rounded-full text-white text-sm">舒适</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 风格二：北欧风情 -->
+                            <div class="min-w-full h-full relative flex-shrink-0">
+                                <img src="https://images.unsplash.com/photo-1567016376408-0226e4d0b1ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                                     alt="北欧风情设计" class="absolute inset-0 w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
+                                    <div class="text-white text-xl font-semibold">北欧风情设计</div>
+                                    <div class="flex space-x-2 mt-2">
+                                        <span class="px-3 py-1 bg-blue-500/80 rounded-full text-white text-sm">自然</span>
+                                        <span class="px-3 py-1 bg-teal-500/80 rounded-full text-white text-sm">清新</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 风格三：东方新中式 -->
+                            <div class="min-w-full h-full relative flex-shrink-0">
+                                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                                     alt="东方新中式" class="absolute inset-0 w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
+                                    <div class="text-white text-xl font-semibold">东方新中式</div>
+                                    <div class="flex space-x-2 mt-2">
+                                        <span class="px-3 py-1 bg-red-500/80 rounded-full text-white text-sm">典雅</span>
+                                        <span class="px-3 py-1 bg-amber-500/80 rounded-full text-white text-sm">韵味</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 风格四：工业风 -->
+                            <div class="min-w-full h-full relative flex-shrink-0">
+                                <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                                     alt="工业风设计" class="absolute inset-0 w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
+                                    <div class="text-white text-xl font-semibold">工业风设计</div>
+                                    <div class="flex space-x-2 mt-2">
+                                        <span class="px-3 py-1 bg-gray-600/80 rounded-full text-white text-sm">硬朗</span>
+                                        <span class="px-3 py-1 bg-stone-500/80 rounded-full text-white text-sm">复古</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 滑动效果指示 -->
+                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full py-1 px-3 text-white text-sm flex items-center">
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m-8 6H4m0 0l4 4m-4-4l4-4"></path>
+                            </svg>
+                            <span>左右滑动查看风格</span>
+                        </div>
+                        
+                        <!-- 左右箭头导航 -->
+                        <button class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 hover:bg-black/50 backdrop-blur-sm text-white flex items-center justify-center transition-all z-10" id="prev-btn">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                        </button>
+                        <button class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 hover:bg-black/50 backdrop-blur-sm text-white flex items-center justify-center transition-all z-10" id="next-btn">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                        
+                        <!-- 动态效果指示器 -->
+                        <div class="absolute bottom-4 right-4 flex space-x-2" id="slider-dots">
+                            <button class="w-2 h-2 rounded-full bg-white transition-all" data-index="0"></button>
+                            <button class="w-2 h-2 rounded-full bg-white/50 transition-all" data-index="1"></button>
+                            <button class="w-2 h-2 rounded-full bg-white/50 transition-all" data-index="2"></button>
+                            <button class="w-2 h-2 rounded-full bg-white/50 transition-all" data-index="3"></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 前景装饰线条 -->
+                <div class="absolute -bottom-10 -right-10 w-32 h-32">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full opacity-60">
+                        <circle cx="50" cy="50" r="49" stroke="url(#paint0_linear)" stroke-width="0.5"/>
+                        <circle cx="50" cy="50" r="30" stroke="url(#paint1_linear)" stroke-width="0.5"/>
+                        <line x1="50" y1="0" x2="50" y2="100" stroke="url(#paint0_linear)" stroke-width="0.5"/>
+                        <line x1="0" y1="50" x2="100" y2="50" stroke="url(#paint0_linear)" stroke-width="0.5"/>
+                        <defs>
+                            <linearGradient id="paint0_linear" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#0EA5E9"/>
+                                <stop offset="1" stop-color="#D946EF"/>
+                            </linearGradient>
+                            <linearGradient id="paint1_linear" x1="20" y1="20" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#D946EF"/>
+                                <stop offset="1" stop-color="#0EA5E9"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 轻量统计数据 -->
+        <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center">
+                <div class="text-4xl font-bold gradient-text">10K+</div>
+                <div class="text-gray-600 dark:text-gray-400 mt-2">完成设计</div>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl font-bold gradient-text">98%</div>
+                <div class="text-gray-600 dark:text-gray-400 mt-2">客户满意度</div>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl font-bold gradient-text">24h</div>
+                <div class="text-gray-600 dark:text-gray-400 mt-2">设计周期</div>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl font-bold gradient-text">50+</div>
+                <div class="text-gray-600 dark:text-gray-400 mt-2">设计风格</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 下面的脚本已移至fix.js中，删除以避免冲突 --> 

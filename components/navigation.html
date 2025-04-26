@@ -1,0 +1,138 @@
+<header class="sticky top-0 z-50 w-full backdrop-blur-lg bg-white/70 dark:bg-gray-900/80 border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <!-- 左侧Logo -->
+            <div class="flex-shrink-0 flex items-center">
+                <a href="#" class="flex items-center">
+                    <span class="text-2xl tracking-tight">
+                        <span class="font-extrabold bg-gradient-to-r from-primary-500 to-secondary-600 bg-clip-text text-transparent">Avision</span>
+                        <span class="font-medium text-gray-700 dark:text-gray-300 ml-1">AI</span>
+                    </span>
+                </a>
+            </div>
+            
+            <!-- 中部导航链接 - 桌面端 -->
+            <nav class="hidden md:flex space-x-1">
+                <a href="#" class="nav-link relative px-5 py-2 rounded-full text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 group">
+                    <span class="relative z-10">首页</span>
+                    <span class="absolute inset-0 bg-primary-50 dark:bg-primary-900/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></span>
+                </a>
+                <a href="#features-container" class="nav-link relative px-5 py-2 rounded-full text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 group">
+                    <span class="relative z-10">产品服务</span>
+                    <span class="absolute inset-0 bg-primary-50 dark:bg-primary-900/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></span>
+                </a>
+                <a href="#advantages-container" class="nav-link relative px-5 py-2 rounded-full text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 group">
+                    <span class="relative z-10">设计优势</span>
+                    <span class="absolute inset-0 bg-primary-50 dark:bg-primary-900/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></span>
+                </a>
+                <a href="#cases-container" class="nav-link relative px-5 py-2 rounded-full text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 group">
+                    <span class="relative z-10">案例展示</span>
+                    <span class="absolute inset-0 bg-primary-50 dark:bg-primary-900/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></span>
+                </a>
+                <a href="#testimonials-container" class="nav-link relative px-5 py-2 rounded-full text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 group">
+                    <span class="relative z-10">用户评价</span>
+                    <span class="absolute inset-0 bg-primary-50 dark:bg-primary-900/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></span>
+                </a>
+            </nav>
+            
+            <!-- 右侧按钮 -->
+            <div class="flex items-center space-x-4">
+                <!-- 登录按钮 -->
+                <a href="#" class="hidden md:block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 px-3 py-1 rounded-lg relative overflow-hidden group">
+                    <span class="relative z-10">登录</span>
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
+                </a>
+                
+                <!-- 注册按钮 -->
+                <a href="#" class="hidden md:inline-flex items-center justify-center px-6 py-2 border border-transparent text-base font-medium rounded-full text-white bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg">
+                    免费试用
+                </a>
+                
+                <!-- 移动端菜单按钮 -->
+                <button type="button" class="md:hidden bg-white/10 dark:bg-gray-800/10 backdrop-blur-lg rounded-lg p-2 inline-flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-white/20 dark:hover:bg-gray-800/20 transition-all duration-300 focus:outline-none" id="mobile-menu-button">
+                    <span class="sr-only">打开菜单</span>
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 移动端菜单 -->
+    <div class="md:hidden hidden absolute w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800 shadow-lg transform transition-transform duration-300 ease-in-out" id="mobile-menu">
+        <div class="px-4 py-4 space-y-2">
+            <a href="#" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300">首页</a>
+            <a href="#features-container" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300">产品服务</a>
+            <a href="#advantages-container" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300">设计优势</a>
+            <a href="#cases-container" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300">案例展示</a>
+            <a href="#testimonials-container" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300">用户评价</a>
+            <div class="pt-4 pb-2 border-t border-gray-200 dark:border-gray-700">
+                <a href="#" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300">登录</a>
+                <a href="#" class="mt-2 block w-full px-4 py-3 text-center font-medium rounded-lg text-white bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700 transition-all duration-300">免费试用</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // 移动端菜单切换
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        
+        // 添加滚动监听，为当前活动导航项添加高亮
+        window.addEventListener('scroll', highlightNavLinks);
+        
+        function highlightNavLinks() {
+            // 获取所有导航链接
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = [];
+            
+            // 获取所有引用的段落部分
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && href.startsWith('#') && href !== '#') {
+                    const section = document.querySelector(href);
+                    if (section) {
+                        sections.push({ link, section });
+                    }
+                }
+            });
+            
+            // 找出当前在视图中的段落
+            let currentSection = null;
+            for (const item of sections) {
+                const rect = item.section.getBoundingClientRect();
+                if (rect.top <= 100 && rect.bottom >= 100) {
+                    currentSection = item;
+                    break;
+                }
+            }
+            
+            // 更新导航链接状态
+            navLinks.forEach(link => {
+                if (currentSection && link === currentSection.link) {
+                    link.classList.add('text-primary-600', 'dark:text-primary-400');
+                    link.querySelector('span.absolute').classList.remove('scale-0');
+                    link.querySelector('span.absolute').classList.add('scale-100');
+                } else {
+                    link.classList.remove('text-primary-600', 'dark:text-primary-400');
+                    if (link.querySelector('span.absolute')) {
+                        link.querySelector('span.absolute').classList.add('scale-0');
+                        link.querySelector('span.absolute').classList.remove('scale-100');
+                    }
+                }
+            });
+        }
+        
+        // 初始化运行一次高亮
+        highlightNavLinks();
+    });
+</script> 
